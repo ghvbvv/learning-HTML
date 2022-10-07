@@ -30,9 +30,53 @@
         <!-- Already specified in the charset above-->
         
         <style>
-            divHeader {border: thin dotted blue;}
-            div {border: thin dotted rgb(0, 255, 4)}
-            divFooter {border: thin dotted purple}
+               * {
+                box-sizing: border-box;
+                font-size:2vw;
+            }
+
+            .div {border: thin dotted red;}
+
+            header{
+                border: 3px solid rgb(45, 7, 233);
+                padding: 15px; 
+                font-size:4vw;  
+            }
+
+            menu{
+                width: 25%;
+                float: left;
+                padding: 15px;
+                border: 3px solid rgb(19,0,128)
+            }
+            .nav{
+                width: 25%;
+                float: right;
+                padding 15px;
+                border: 1px solid rgb(0, 0, 0)
+
+            }
+            main{
+                width: 100%;
+                float: middle;
+                padding: 10px;
+                border: 2px solid rgb(19,0,128)
+            }
+            .aside{
+                width: 25%;
+                float: left;
+                padding: 15px;
+                border: 3px solid rgb(19,0,128)
+            }
+            .footer{
+                padding: 15px;
+                border: 3px solid rgb(19,0,128)
+            }          
+        
+            divHeader {border: 1px rgb(94, 5, 211);}
+            div {border: thin dotted rgb(79, 4, 140)}
+            divFooter {border: thin dotted rgb(116, 11, 116)}
+
         </style>
 
         <noscript>Running JavaScript is not necessary in the HTML Page ... FYI: your Feature to execute scripts is turned off</noscript>
@@ -43,11 +87,11 @@
 
         <body style="background-color:gray;">
         
-        <header><div><divHeader><h1 style="color:pink;font-size:5.5vw">Learning HTML</h1></divHeader></div></header>
+        <header class="header"><div><divHeader><h1 style="color:rgb(34, 188, 209);font-size:5.5vw">Learning HTML</h1></divHeader></div></header>
         <nav><div>
-            <header style="font-size:3vw">Navigation</header>
+            <header class="nav":style="font-size:3vw">Navigation</header>
             <section>
-                <header style="font-size:2vw">Various Pages</header>
+                <header class="main":style="font-size:2vw">Various Pages</header>
                 <ul style="list-style-type:square; font-size:0.90vw">
                     <li> <sub>Meta Data Example:</sub> <a href="childPages/Meta Data Example.html" target="_blank">Open this in ATOM to see meta data changes :)</a>
                     <li> Footer Blockquote Example: <a href="childPages/Footer Blockquote Example.html" target="_blank">link will take you to footer blockquote example</a>
@@ -60,8 +104,8 @@
                 </ul>
             </section>
         </div></nav>
-        <aside></aside>
-        <main>
+        <aside>aside</aside>
+        <main class="main">
             <div>
             <h2>section to summerize Lessons</h2>
             </div>
@@ -71,7 +115,7 @@
         <footer></footer>
     </body>
 
-    <div><divfooter><footer>
+    <divfooter><footer>
         <blockquote cite="https://www.brainyquote.com/quotes/mitch_kapor_163583">
             <!-- Date Accessed 20220919 -->
         </blockquote>
@@ -84,5 +128,5 @@
             </em>
         </p>
         <p>&copy Mark Mercer, powered by MercersKitchen in GitHub</p>
-    </footer></div></divfooter>
+    </footer></divfooter>
 </html>
